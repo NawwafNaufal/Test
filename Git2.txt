@@ -1,0 +1,235 @@
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/EATHER (main)
+$ cd ..
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop
+$ mkdir git2
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop
+$ cd git2
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2
+$ git init
+Initialized empty Git repository in C:/Users/LENOVO/OneDrive/Desktop/git2/.git/
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ ls
+Index.html
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git add .
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git commit -m "Index"
+[master (root-commit) f831778] Index
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Index.html
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ ls
+Index.html
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git commit -am "Tambah P"
+[master 9b5a5b2] Tambah P
+ 1 file changed, 1 insertion(+)
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ graph
+* 9b5a5b2 (HEAD -> master) Tambah P
+* f831778 Index
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git remote
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git remote add origin https://github.com/NawwafNaufal/Test.git
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git remote
+origin
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git remote -v
+origin  https://github.com/NawwafNaufal/Test.git (fetch)
+origin  https://github.com/NawwafNaufal/Test.git (push)
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/NawwafNaufal/Test.git'
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (master)
+$ git branch -M main
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 748 bytes | 249.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/NawwafNaufal/Test.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git commit -am "Tambah List"
+[main 3d34990] Tambah List
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ graph
+* 3d34990 (HEAD -> main) Tambah List
+* 9b5a5b2 (origin/main) Tambah P
+* f831778 Index
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 333 bytes | 333.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NawwafNaufal/Test.git
+   9b5a5b2..3d34990  main -> main
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ graph
+* 3d34990 (HEAD -> main, origin/main) Tambah List
+* 9b5a5b2 Tambah P
+* f831778 Index
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git add .
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git commit -m "Tambah New file"
+[main 20fcab1] Tambah New file
+ 1 file changed, 3 insertions(+)
+ create mode 100644 Style.css
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git push
+To https://github.com/NawwafNaufal/Test.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/NawwafNaufal/Test.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git fetch
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ graph
+* 20fcab1 (HEAD -> main) Tambah New file
+| * 344efc4 (origin/main) Create Style.css
+|/
+* 3d34990 Tambah List
+* 9b5a5b2 Tambah P
+* f831778 Index
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git pull
+Auto-merging Style.css
+CONFLICT (add/add): Merge conflict in Style.css
+Automatic merge failed; fix conflicts and then commit the result.
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      Style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main|MERGING)
+$ git add .
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main|MERGING)
+$ git commit -m "New"
+[main 1052c72] New
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 690 bytes | 230.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/NawwafNaufal/Test.git
+   344efc4..1052c72  main -> main
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$ graph
+*   1052c72 (HEAD -> main, origin/main) New
+|\
+| * 344efc4 Create Style.css
+* | 20fcab1 Tambah New file
+|/
+* 3d34990 Tambah List
+* 9b5a5b2 Tambah P
+* f831778 Index
+
+LENOVO@DESKTOP-JEFCHSA MINGW64 ~/OneDrive/Desktop/git2 (main)
+$
+
+
